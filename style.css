@@ -1,0 +1,211 @@
+/* Подключение шрифта Archangels */
+/* Убедитесь, что файлы шрифта находятся в папке fonts или измените путь на корректный */
+/* @font-face {
+    font-family: 'Archangels';
+    src: url('./font/ofont.ru_Archangelsk.ttf') format('woff2'),
+         url('/font/ofont.ru_Archangelsk.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  } */
+  
+  /* Общие стили */
+  body {
+    font-family: 'arial';
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* header {
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+   
+  header h1 {
+    margin: 0;
+    color: #0ef;
+  } 
+  
+   .logo {
+    width: 100px;
+   }
+    */
+  
+  /* Приветственное окно (Hero Section) */
+
+  #welcome {
+    height: 100vh;
+    background: url('./img/zastavki-gas-kvas-com-ivkr-p-zastavki-kontr-straik-33.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* затемнение для лучшей читаемости */
+  }
+  
+  .welcome-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    width: 900px;
+  }
+  
+  .welcome-overlay h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #0ef;
+  }
+  
+  .welcome-overlay p {
+    font-size: 1.5em;
+  }
+
+  /* Секции */
+  section {
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .monitoring-box,
+  .forum-box,
+  .price-list {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Донат */
+  .donate-button {
+    display: inline-block;
+    background: #0ef;
+    color: #121212;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .donate-button:hover {
+    background: #0cc;
+  }
+  
+  /* Прайс-лист */
+  .price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .price-item {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .price-item h3 {
+    color: #0ef;
+  }
+  
+  .price-item span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  /* Социальные сети */
+  .social-links {
+    margin-bottom: 10px;
+  }
+  
+  .social-links a {
+    color: #0ef;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Подвал */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #1e1e1e;
+  }
+  
+  /* Медиа-запросы для адаптивности */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5em;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    nav ul li {
+      margin: 5px 0;
+    }
+  
+    .welcome-overlay h2 {
+      font-size: 2.5em;
+    }
+  
+    .welcome-overlay p {
+      font-size: 1.2em;
+    }
+  
+    .monitoring-box,
+    .forum-box,
+    .price-list {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.2em;
+    }
+  
+    .welcome-overlay h2 {
+      font-size: 2em;
+    }
+  
+    .welcome-overlay p {
+      font-size: 1em;
+    }
+  
+    nav ul li {
+      margin: 3px 0;
+    }
+  }
+
+  .social-links img {
+    width: 50px;
+  }
